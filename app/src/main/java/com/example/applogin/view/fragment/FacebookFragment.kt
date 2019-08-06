@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
+import com.example.applogin.Callback.Message
 
 
 import com.example.applogin.R
@@ -45,8 +47,13 @@ class FacebookFragment : Fragment() {
             imageFacebook.profileId = it.id
         })
         login_button.setOnClickListener{
-            facebookViewmodel.loginfacebook(callbackManager)
+            facebookViewmodel.loginfacebook(callbackManager , object : Message{
+                override fun listen(mess: String) {
+                    Toast.makeText(context,mess!!,Toast.LENGTH_LONG).show()
+                }
+            })
         }
+
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -54,9 +61,5 @@ class FacebookFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        facebookViewmodel.clear()
-    }
 
 }

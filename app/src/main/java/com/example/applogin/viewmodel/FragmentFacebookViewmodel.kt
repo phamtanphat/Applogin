@@ -17,6 +17,7 @@ import com.facebook.login.LoginResult
 import java.util.*
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.LiveData
+import com.example.applogin.Callback.Message
 
 class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver{
 
@@ -33,7 +34,7 @@ class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver{
     }
 
     @OnLifecycleEvent(ON_CREATE)
-    fun loginfacebook( callbackManager: CallbackManager ){
+    fun loginfacebook( callbackManager: CallbackManager , message : Message){
         LoginManager.getInstance().registerCallback(callbackManager, object  : FacebookCallback<LoginResult> {
             override fun onSuccess(loginResult: LoginResult?) {
                 val request = GraphRequest.newMeRequest(loginResult!!.accessToken ){ `object`, response ->
@@ -50,11 +51,11 @@ class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver{
             }
 
             override fun onCancel() {
-
+                message.listen("Ban da huy dang nhap")
             }
 
             override fun onError(error: FacebookException?) {
-
+                message.listen(error?.message.toString())
             }
 
         })
