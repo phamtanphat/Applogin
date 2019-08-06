@@ -19,7 +19,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.LiveData
 import com.example.applogin.Callback.Message
 
-class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver{
+class FragmentFacebookViewmodel(lifecycle: Lifecycle) : ViewModel() , LifecycleObserver{
 
 
     private val mutableLiveDatafacebook = MutableLiveData<Facebook>()

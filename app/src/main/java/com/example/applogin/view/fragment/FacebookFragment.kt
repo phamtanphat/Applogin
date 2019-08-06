@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
@@ -25,9 +26,9 @@ import com.facebook.login.LoginResult
 import kotlinx.android.synthetic.main.fragment_facebook.*
 
 
-class FacebookFragment : Fragment() {
+class FacebookFragment : Fragment() , LifecycleObserver {
 
-    var facebookViewmodel : FragmentFacebookViewmodel = FragmentFacebookViewmodel()
+    var facebookViewmodel : FragmentFacebookViewmodel = FragmentFacebookViewmodel(lifecycle)
     val callbackManager : CallbackManager = CallbackManager.Factory.create()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_facebook, container, false)
