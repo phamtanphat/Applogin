@@ -19,7 +19,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.LiveData
 import com.example.applogin.Callback.Message
 
-class FragmentFacebookViewmodel(lifecycle: Lifecycle) : ViewModel() , LifecycleObserver{
+class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver {
 
 
     private val mutableLiveDatafacebook = MutableLiveData<Facebook>()
@@ -60,7 +60,6 @@ class FragmentFacebookViewmodel(lifecycle: Lifecycle) : ViewModel() , LifecycleO
 
         })
     }
-
     @OnLifecycleEvent(ON_DESTROY)
     fun clear(){
         mutableLiveDatafacebook.value = null

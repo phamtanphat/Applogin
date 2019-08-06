@@ -28,7 +28,7 @@ import kotlinx.android.synthetic.main.fragment_facebook.*
 
 class FacebookFragment : Fragment() , LifecycleObserver {
 
-    var facebookViewmodel : FragmentFacebookViewmodel = FragmentFacebookViewmodel(lifecycle)
+    var facebookViewmodel : FragmentFacebookViewmodel = FragmentFacebookViewmodel()
     val callbackManager : CallbackManager = CallbackManager.Factory.create()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_facebook, container, false)
@@ -54,12 +54,16 @@ class FacebookFragment : Fragment() , LifecycleObserver {
                 }
             })
         }
-
-
+        lifecycle.addObserver(facebookViewmodel)
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        facebookViewmodel.clear()
     }
 
 

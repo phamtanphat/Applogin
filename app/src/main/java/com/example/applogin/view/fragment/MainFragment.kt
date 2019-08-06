@@ -31,7 +31,7 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         facebookLogin.setOnClickListener { v ->Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_facebookFragment)  }
-
+        linkedinLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_linkedinFragment) }
 
     }
 
