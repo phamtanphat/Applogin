@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment"
+            tools:ignore="UnusedNavigation">
+
+    <fragment android:id="@+id/mainFragment" android:name="com.example.applogin.view.fragment.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action
+                android:id="@+id/action_mainFragment_to_facebookFragment"
+                app:destination="@id/facebookFragment"/>
+        <action
+                android:id="@+id/action_mainFragment_to_googleFragment"
+                app:destination="@id/googleFragment"/>
+        <action
+                android:id="@+id/action_mainFragment_to_zaloFragment"
+                app:destination="@id/zaloFragment"/>
+        <action
+                android:id="@+id/action_mainFragment_to_linkedinFragment"
+                app:destination="@id/linkedinFragment"/>
+        <action
+                android:id="@+id/action_mainFragment_to_twisterFragment"
+                app:destination="@id/twisterFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/facebookFragment"
+            android:name="com.example.applogin.view.fragment.FacebookFragment"
+            android:label="fragment_facebook"
+            tools:layout="@layout/fragment_facebook"/>
+    <fragment
+            android:id="@+id/googleFragment"
+            android:name="com.example.applogin.view.fragment.GoogleFragment"
+            android:label="fragment_google"
+            tools:layout="@layout/fragment_google"/>
+    <fragment
+            android:id="@+id/linkedinFragment"
+            android:name="com.example.applogin.view.fragment.LinkedinFragment"
+            android:label="fragment_linkedin"
+            tools:layout="@layout/fragment_linkedin"/>
+    <fragment
+            android:id="@+id/twisterFragment"
+            android:name="com.example.applogin.view.fragment.TwisterFragment"
+            android:label="fragment_twister"
+            tools:layout="@layout/fragment_twister"/>
+    <fragment
+            android:id="@+id/zaloFragment"
+            android:name="com.example.applogin.view.fragment.ZaloFragment"
+            android:label="fragment_zalo"
+            tools:layout="@layout/fragment_zalo"/>
+</navigation>
