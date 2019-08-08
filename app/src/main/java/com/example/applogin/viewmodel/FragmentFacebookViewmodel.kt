@@ -33,7 +33,6 @@ class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver {
         return mutableLiveDatafacebook
     }
 
-    @OnLifecycleEvent(ON_CREATE)
     fun loginfacebook( callbackManager: CallbackManager , message : Message){
         LoginManager.getInstance().registerCallback(callbackManager, object  : FacebookCallback<LoginResult> {
             override fun onSuccess(loginResult: LoginResult?) {
@@ -60,7 +59,6 @@ class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver {
 
         })
     }
-    @OnLifecycleEvent(ON_DESTROY)
     fun clear(){
         mutableLiveDatafacebook.value = null
     }

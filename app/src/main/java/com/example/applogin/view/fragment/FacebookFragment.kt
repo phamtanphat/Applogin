@@ -61,8 +61,8 @@ class FacebookFragment : Fragment() , LifecycleObserver {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDetach() {
+        super.onDetach()
         facebookViewmodel.clear()
     }
 
