@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".view.fragment.GoogleFragment">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".view.fragment.FacebookFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/imageGoogle"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:textColor="#f20"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/textUsernameGoogle"
+            android:text="User name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:textColor="#329788"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/textEmailGoogle"
+            android:text="Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <com.google.android.gms.common.SignInButton
+            android:layout_marginTop="50dp"
+            app:buttonSize="wide"
+            android:layout_gravity="center"
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</FrameLayout>
+</LinearLayout>

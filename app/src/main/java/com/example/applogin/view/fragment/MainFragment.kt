@@ -32,6 +32,8 @@ class MainFragment : Fragment() {
 
         facebookLogin.setOnClickListener { v ->Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_facebookFragment)  }
         linkedinLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_linkedinFragment) }
+        googleLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_googleFragment) }
+        zaloLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_zaloFragment) }
 
     }
 

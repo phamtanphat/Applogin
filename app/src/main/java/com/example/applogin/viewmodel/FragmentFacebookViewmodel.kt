@@ -1,11 +1,7 @@
 package com.example.applogin.viewmodel
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.*
-import androidx.lifecycle.Lifecycle.Event.ON_CREATE
-import androidx.lifecycle.Lifecycle.Event.ON_DESTROY
 import com.example.applogin.model.Facebook
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -17,7 +13,7 @@ import com.facebook.login.LoginResult
 import java.util.*
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.LiveData
-import com.example.applogin.Callback.Message
+import com.example.applogin.callback.Message
 
 class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver {
 

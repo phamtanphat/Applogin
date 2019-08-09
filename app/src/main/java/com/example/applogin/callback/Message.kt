@@ -1,4 +1,4 @@
-package com.example.applogin.Callback
+package com.example.applogin.callback
 
 interface Message {
     fun listen(mess: String)

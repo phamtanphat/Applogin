@@ -1,9 +1,7 @@
 package com.example.applogin.viewmodel
 
-import android.util.JsonToken
-import android.util.Log
 import androidx.lifecycle.*
-import com.example.applogin.Callback.Message
+import com.example.applogin.callback.Message
 import com.example.applogin.api.ApiConnection
 import com.example.applogin.api.response.FirstName
 import com.example.applogin.api.response.LastName
@@ -31,9 +29,7 @@ class FragmentLinkedinViewmodel : ViewModel() , LifecycleObserver {
         ApiConnection.getAPi()!!.login().enqueue(object : Callback<Linkedin>{
             override fun onFailure(call: Call<Linkedin>, t: Throwable) {
                 message.listen(t.message.toString())
-
             }
-
             override fun onResponse(call: Call<Linkedin>, response: Response<Linkedin>) {
                 if (response.isSuccessful && response.code() == 200){
                     mutableLiveDataLinkedin.value = response.body()

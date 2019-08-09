@@ -18,5 +18,15 @@
             android:text="Linkedin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/googleLogin"
+            android:text="Google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/zaloLogin"
+            android:text="Zalo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

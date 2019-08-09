@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Applogin</string>
-
+    <string name="appID">4470963560166021330</string>
+    <string name="idscheme">zalo-4470963560166021330</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_app_id">2557409707613013</string> <string name="fb_login_protocol_scheme">fb2557409707613013</string>
