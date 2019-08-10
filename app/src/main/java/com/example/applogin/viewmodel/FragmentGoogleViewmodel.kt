@@ -43,8 +43,6 @@ class FragmentGoogleViewmodel : ViewModel(), LifecycleObserver {
 
     }
 
-    fun clear() {
-        mutableLiveDataGoogle.value = null
-    }
+
 
 }

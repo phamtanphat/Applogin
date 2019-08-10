@@ -55,9 +55,7 @@ class FragmentFacebookViewmodel : ViewModel() , LifecycleObserver {
 
         })
     }
-    fun clear(){
-        mutableLiveDatafacebook.value = null
-    }
+
 
     fun permission() : List<String>{
         return Arrays.asList("user_gender" , "user_birthday")

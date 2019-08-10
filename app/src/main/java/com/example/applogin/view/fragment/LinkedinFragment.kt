@@ -50,8 +50,5 @@ class LinkedinFragment : Fragment() {
         lifecycle.addObserver(fragmentLinkedinViewmodel)
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        fragmentLinkedinViewmodel.clear()
-    }
+
 }

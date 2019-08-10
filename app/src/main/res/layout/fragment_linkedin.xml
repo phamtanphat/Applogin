@@ -17,7 +17,7 @@
     <TextView
             android:textColor="#f20"
             android:layout_marginTop="10dp"
-            android:textSize="40sp"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/textUsernameLinkedin"
             android:text="User name"

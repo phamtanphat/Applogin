@@ -17,7 +17,7 @@
     <TextView
             android:textColor="#f20"
             android:layout_marginTop="10dp"
-            android:textSize="40sp"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/textUsernameZalo"
             android:text="User name"
@@ -26,7 +26,7 @@
     <TextView
             android:textColor="#329788"
             android:layout_marginTop="10dp"
-            android:textSize="40sp"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/textGenderZalo"
             android:text="Gender"
@@ -35,7 +35,7 @@
     <TextView
             android:textColor="#BE329788"
             android:layout_marginTop="10dp"
-            android:textSize="40sp"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/textBirthdayZalo"
             android:text="Birthday"

@@ -1,22 +1,16 @@
 package com.example.applogin.view.activity
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.applogin.R
-import java.security.NoSuchAlgorithmException
-import android.util.Base64
 import android.util.Log
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
+import com.example.applogin.R
+import com.example.applogin.view.fragment.TwitterFragment
 import com.example.applogin.view.fragment.ZaloFragment
-import com.zing.zalo.zalosdk.oauth.ZaloOpenAPICallback
-import com.zing.zalo.zalosdk.oauth.ZaloSDK
-import org.json.JSONObject
-import java.security.MessageDigest
+import com.twitter.sdk.android.core.DefaultLogger
+import com.twitter.sdk.android.core.Twitter
+import com.twitter.sdk.android.core.TwitterAuthConfig
+import com.twitter.sdk.android.core.TwitterConfig
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             val childFragments = navHostFragment.childFragmentManager.fragments
             childFragments.forEach { fragment ->
                 if ( fragment is ZaloFragment) {
+                    fragment.onActivityResult(requestCode, resultCode, data)
+                }
+                if (fragment is TwitterFragment){
                     fragment.onActivityResult(requestCode, resultCode, data)
                 }
             }

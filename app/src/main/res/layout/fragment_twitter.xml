@@ -7,10 +7,10 @@
         android:orientation="vertical"
         tools:context=".view.fragment.FacebookFragment">
 
-    <com.facebook.login.widget.ProfilePictureView
+    <ImageView
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_launcher_background"
-            android:id="@+id/imageFacebook"
+            android:id="@+id/imagetwitter"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
             android:layout_height="200dp"/>
@@ -19,7 +19,7 @@
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/textUsernameFacebook"
+            android:id="@+id/textUsernametwitter"
             android:text="User name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -28,8 +28,8 @@
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/textGenderFacebook"
-            android:text="Gender"
+            android:id="@+id/textScreentwitter"
+            android:text="Screen name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     <TextView
@@ -37,16 +37,15 @@
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/textBirthdayFacebook"
-            android:text="Birthday"
+            android:id="@+id/textEmailtwitter"
+            android:text="Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-    <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp" />
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/twitter_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -28,5 +28,10 @@
             android:text="Zalo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/twitterLogin"
+            android:text="Twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

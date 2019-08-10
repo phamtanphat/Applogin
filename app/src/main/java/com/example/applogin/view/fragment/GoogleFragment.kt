@@ -81,9 +81,6 @@ class GoogleFragment : Fragment() {
         }
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        fragmentGoogleViewmodel.clear()
-    }
+
 
 }

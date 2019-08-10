@@ -43,7 +43,5 @@ class FragmentZaloViewmodel : ViewModel() , LifecycleObserver{
 
     }
 
-    fun clear() {
-        mutableLiveDataZaloFragment.value = null
-    }
+
 }

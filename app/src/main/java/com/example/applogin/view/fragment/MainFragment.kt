@@ -18,6 +18,7 @@ import android.content.Intent
 import android.util.Log
 import androidx.navigation.Navigation
 import com.facebook.login.LoginManager
+import kotlinx.android.synthetic.main.fragment_twitter.*
 
 
 class MainFragment : Fragment() {
@@ -34,7 +35,7 @@ class MainFragment : Fragment() {
         linkedinLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_linkedinFragment) }
         googleLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_googleFragment) }
         zaloLogin.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_zaloFragment) }
-
+        twitterLogin.setOnClickListener{ v -> Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_twisterFragment) }
     }
 
 

@@ -41,9 +41,9 @@
             tools:layout="@layout/fragment_linkedin"/>
     <fragment
             android:id="@+id/twisterFragment"
-            android:name="com.example.applogin.view.fragment.TwisterFragment"
+            android:name="com.example.applogin.view.fragment.TwitterFragment"
             android:label="fragment_twister"
-            tools:layout="@layout/fragment_twister"/>
+            tools:layout="@layout/fragment_twitter"/>
     <fragment
             android:id="@+id/zaloFragment"
             android:name="com.example.applogin.view.fragment.ZaloFragment"

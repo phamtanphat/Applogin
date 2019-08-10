@@ -63,10 +63,6 @@ class FacebookFragment : Fragment() , LifecycleObserver {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        facebookViewmodel.clear()
-    }
 
 
 }

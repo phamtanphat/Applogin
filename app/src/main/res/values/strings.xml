@@ -6,4 +6,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_app_id">2557409707613013</string> <string name="fb_login_protocol_scheme">fb2557409707613013</string>
 
+    <string name="twitterconsumkey">e8X1nsr9ctMgbNZngpZe09n1F</string>
+    <string name="twitterconsumsecretkey">DmK3amsD14nrGfUiYkAKxYoqGTJXcUQnjFWITiWYkby7mWe34w</string>
 </resources>

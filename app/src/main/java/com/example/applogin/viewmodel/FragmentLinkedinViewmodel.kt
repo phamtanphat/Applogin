@@ -37,7 +37,4 @@ class FragmentLinkedinViewmodel : ViewModel() , LifecycleObserver {
             }
         })
     }
-    fun clear(){
-        mutableLiveDataLinkedin.value = null
-    }
 }
